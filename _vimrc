@@ -1,12 +1,18 @@
+
+
 source $VIMRUNTIME/vimrc_example.vim
-filetype on
 source $VIMRUNTIME/mswin.vim
 behave mswin
-set nocompatible 
+set guifont=consolas
+set fileencodings=utf-8,gbk
 set nu!
 set ignorecase
-set guifont=consolas
-color desert
+
+set nocompatible
+filetype off 
+set smartindent
+set mouse=a
+color desert 
 
 set diffexpr=MyDiff()
 function MyDiff()
@@ -38,9 +44,8 @@ function MyDiff()
   endif
 endfunction
 
-set rtp+=C:\Users\ocean6\vundle.vim
+set rtp+=C:\Users\2016_12_09\Vundle.vim
 call vundle#begin()
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'majutsushi/tagbar'
 let g:tagbar_ctags_bin='ctags'            
@@ -61,6 +66,6 @@ map <F12> :MBEbn<CR>
 Plugin 'bling/vim-airline'
 set laststatus=2
 call vundle#end()            " required
-filetype on
-filetype plugin indent on    " required
+filetype plugin indent on 
+set ts=4
 
