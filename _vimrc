@@ -68,4 +68,6 @@ set laststatus=2
 call vundle#end()            " required
 filetype plugin indent on 
 set ts=4
-
+set noundofile
+set nobackup
+set noswapfile
